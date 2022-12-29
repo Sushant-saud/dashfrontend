@@ -1,13 +1,370 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+.color
+{
+  color:red;
+  width:100%;
+  text-align: center;
+  height: auto;
+}
+.fa-solid{
+  color:white;
+  font-size:2rem;
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.footer{
+  position:fixed;
+  bottom: 0px;
+  left:0px;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:6%;
+  background:rgb(28, 23, 23);
+}
+.footer h4{
+  color:white;
+}
+.App{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+ .Nav{
+  width:100%;
+  height:10.5vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  position:sticky;
+  top:0px;
+  background:#0c0718;
+  box-shadow:0px 0px 2px 2px rgb(155, 143, 143);
+  padding:1rem;
+
+}
+.slider ul {
+  display: flex;
+  width: 100%;
+  transition: 1s ease;
+  justify-content: center;
+}
+
+.slider ul li {
+  margin-block: 1rem;
+  margin-inline: 2rem;
+  list-style: none;
+}
+.slider ul li a {
+  letter-spacing: 0px;
+  color:white;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 200;
+}
+.HomeComponent
+{
+  width:100vw;
+  height:85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity:11;
+  font-weight: bold;
+  margin-top:-5px;
+}
+.HomeComponent img{
+ object-fit: cover;
+ width:100vw;
+ height:87vh;
+}
+.Nav .a li a{
+color: white;
+font-size:1rem;
+font-weight:bold;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Nav  li {
+  list-style: none;
+  text-align:center;
+  color: white;
+}
+.img{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  border:1px solid forestgreen;
+}
+
+.Link{
+  text-decoration: none;
+}
+.register-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;;
+  height:90vh;
+  background: rgb(166, 177, 198);
+}
+.register{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  align-items: center;
+  justify-content: center;
+  width:25%;
+  height:70%;
+  background: rgb(247, 241, 241);
+}
+ input{
+  outline: none;
+  height:3rem;
+  border: none;
+  border-bottom: 1px solid rgb(237, 210, 210);
+  font-size:0.8rem;
+  font-weight:normal;
+  width:80%;
+  text-align: center;
+  font-size:1rem;
+  font-family:'Franklin Gothic ', 'Arial Narrow', Arial, sans-serif;
+}
+button{
+  background: rgb(114, 118, 228);
+  color:rgb(7, 10, 14);
+  border:none;
+  height:40px;
+  width:110px;
+  outline: none;
+  border-radius:10px;
+  color:white;
+  margin:10px;
+}
+button:hover{
+  background: rgb(240, 142, 142);
+  color:white;
+  transition:1s ease;
+}
+.para{
+  font-size:1rem;
+  font-weight:bold;
+  text-align: center;
+}
+.product-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:6px;
+  text-align: center;
+  width:80%;
+}
+.product-list ul{
+  width:100%;
+  height:100%;
+}
+.product-list ul li{
+  display:inline-block;
+  padding:5px;
+  width:150px;
+  border:1px solid skyblue;
+}
+.search-product{
+  width:400px;
+  margin:20px;
+  height:40px;
+  border:1px solid skyblue;
+  padding-left: 20px;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.op{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px){
+  .HomeComponent{
+    height:100vh;
+  }
+.HomeComponent .details h2{
+  font-size:1.1rem;
+}
+.search-product{
+  width:95%;
+}
+.img{
+  width:3rem;
+  height:3rem;
+}
+.Nav{
+  height:4rem;
+}
+  .fa-solid{
+    display:block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size:2rem;
+  }
+  .slider {
+    position: fixed;
+    min-width: 100%;
+    height: 40vh;
+    top: -200%;
+    transition: 1s ease;
+  }
+  .slider.active {
+    top:0;
+    left:0;
+    transition: 1s ease;
+    background: rgb(120, 110, 110);
+  }
+  .slider{
+    background: rgb(145, 16, 16);
+  
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+  }
+  .slider ul li {
+    text-align: center;
+    list-style: none;
+    border-bottom: 1.5px solid rgb(235, 213, 213);
+    width: 80%;
+  }
+  .slider ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color:white;
+  }
+  .close
+  {
+  position: absolute;
+  top:5px;
+  right: 5px;
+  cursor: pointer;
+  color:#f8f8f8;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+@media screen and (max-width:900px) {
+  .register{
+    width:80%;
+  }
+  .HomeComponent{
+    height:90vh;
+  }
+    .HomeComponent img{
+      object-fit: cover;
+  }
+  .Nav{
+    margin-top:-10px;
+  }
+  
 }
