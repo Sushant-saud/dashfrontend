@@ -10,7 +10,7 @@ function Home() {
     callApi();
   }, [])
   const callApi = async () => {
-    let resut = await fetch('http://localhost:3000/product',{
+    let resut = await fetch('https://ed-ashboard-sushantsaud9804-gmailcom.vercel.app/product',{
    headers:
    {
     authorization:`${JSON.parse(localStorage.getItem('token'))}`
@@ -20,7 +20,7 @@ function Home() {
     setproduct(data);
   }
   const deleteProduct= async (id) => {
-    let result = await fetch(`http://localhost:3000/product/${id}`,
+    let result = await fetch(`https://ed-ashboard-sushantsaud9804-gmailcom.vercel.app/product/${id}`,
       {
         'method': 'Delete',
          headers:{
@@ -38,7 +38,7 @@ function Home() {
   const handleSearch = async (e) => {
     let key = e.target.value;
     if (key) {
-      let result = await fetch(`https://ed-ashboard-sushantsaud9804-gmailcom.vercel.app//search/${key}`,{
+      let result = await fetch(`https://ed-ashboard-sushantsaud9804-gmailcom.vercel.app/search/${key}`,{
         headers:{
           authorization:`${JSON.parse(localStorage.getItem('token'))}`
          }
